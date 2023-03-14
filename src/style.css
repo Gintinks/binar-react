@@ -1,0 +1,95 @@
+body {
+    margin: 12px;
+    margin-top: 30px;
+}
+
+/* input,
+select {
+    display: inline-block;
+    border: 2px solid;
+    width: 75%;
+    margin-bottom: 10px;
+    padding: 4px;
+} */
+.test-form {
+    width: 75%;
+    margin: auto;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+td,
+th {
+    border: 1px solid;
+}
+
+tbody {
+    text-align: center;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.button-container {
+    font-weight: 600;
+    display: block;
+    border: 2px solid ;
+    width: 35%;
+    border: none;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+}
+
+.submit{
+    border: 2px solid #4CAF50;
+    background-color: white;
+    color: #4CAF50;
+}
+
+.submit:hover{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.update{
+    border: 2px solid #ffff00;
+    background-color: white;
+    color: black;
+}
+
+.update:hover{
+    background-color: #ffff00;
+    color: black;
+}
+
+
+
