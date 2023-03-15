@@ -8,7 +8,12 @@ import React, {
 function App() {
   const [index, setIndex] = useState(1)
   const [data, setData] = useState([]);
-  const [dataUpdate, setDataUpdate] = useState(0)
+  const [dataUpdate, setDataUpdate] = useState({
+    id: 0,
+    name: "",
+    age:0,
+    status:"Active"
+  })
 
   //handle submit for FormComponent
   const handleSubmit = (event) => {
@@ -22,6 +27,12 @@ function App() {
       status: target.status.value,
     };
     setData([...data, newForm]);
+    setDataUpdate({
+      id: 0,
+      name: "",
+      age:0,
+      status:"Active"
+    })
     target.reset();
   };
 
@@ -30,7 +41,7 @@ function App() {
     event.preventDefault()
     const { target } = event;
     const newItems = [...data];
-    const index = newItems.findIndex(item => item.id === dataUpdate);
+    const index = newItems.findIndex(item => item.id === dataUpdate.id);
     console.log(index);
     const newItem = {
       ...newItems[index],
@@ -40,7 +51,13 @@ function App() {
     };
     newItems.splice(index, 1, newItem);
     setData(newItems);
-    setDataUpdate(0)
+
+    setDataUpdate({
+      id: 0,
+      name: "",
+      age:0,
+      status:"Active"
+    })
     target.reset();
   };
 
@@ -55,7 +72,7 @@ function App() {
 
   return (
     <div className="App">
-      <FormComponent handleSubmit={handleSubmit} handleSubmitUpdate={handleSubmitUpdate} dataUpdate={dataUpdate} />
+      <FormComponent handleSubmit={handleSubmit} handleSubmitUpdate={handleSubmitUpdate} dataUpdate={dataUpdate} setDataUpdate={setDataUpdate} />
       <TableComponent data={data} deleteData={deleteData} UpdateData={UpdateData} />
     </div>
   );
