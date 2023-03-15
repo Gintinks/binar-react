@@ -15,7 +15,7 @@ const TableComponent = (props) => {
                     <td>{data.status}</td>
                     <td>
                         <div className="table-choice">
-                            <UpdateComponent id={data.id }  updateData = {props.UpdateData}/>
+                            <UpdateComponent data={data }  updateData = {props.UpdateData}/>
                             <DeleteComponent id={data.id} deleteData = {props.deleteData}/>
                         </div>
                     </td>

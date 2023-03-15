@@ -1,8 +1,8 @@
 
 
-const UpdateComponent = ({ id, updateData}) => {
+const UpdateComponent = ({ data, updateData}) => {
     const handleClick = () => {
-        updateData(id)
+        updateData(data)
     }
     return (
         <button onClick={handleClick}>
